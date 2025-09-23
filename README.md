@@ -1,3 +1,7 @@
+## Оригинальный репозиторий
+
+[https://github.com/0xN1ck/grpc_example](https://github.com/0xN1ck/grpc_example)
+
 ## Серия статей на тему применения gRPC на Python.
 
 - [Введение в gRPC: Основы, применение, плюсы и минусы. Часть I.](./README/gRPC%20part%20I.md)
