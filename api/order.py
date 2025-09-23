@@ -60,7 +60,11 @@ async def list_orders(
     except AioRpcError as e:
         raise HTTPException(status_code=404, detail=e.details())
 
-    return JSONResponse(OrderListResponse(**MessageToDict(orders)).dict())
+    orders_dict = MessageToDict(orders)
+    if orders_dict.get('orders') is None:
+        orders_dict['orders'] = []
+
+    return JSONResponse(OrderListResponse(**orders_dict).dict())
 
 
 @router.get("/{uuid:str}")
